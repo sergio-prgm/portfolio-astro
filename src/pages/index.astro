@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Section from '../layouts/Section.astro';
+
+import Projects from '../components/sections/Projects.astro';
+import Hero from '../components/sections/Hero.astro';
+import About from '../components/sections/About.astro'
+import ProjectCard from '../components/ProjectCard.astro';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout title="Welcome to Astro.">
+  <Navbar />
+	<main>
+		<h1><span class="text-gradient">Sergio Esteve Jordá</span></h1>
+    <Section title="Hero">
+      <Hero />
+    </Section>
+    <Section title="About">
+      <About />
+    </Section>
+    <Section title="Projects">
+      <Projects >
+        <ProjectCard description="Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
+          title="Gym logger"
+          href='https://mdn.dev'
+          tags={['Angular', 'Firebase', 'Tailwind', 'CRUD', 'Authentication']}
+        />
+        <ProjectCard description="This is a test to seee how it behaves with different sizes of text. Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
+          title="Gym logger"
+          href='https://mdn.dev'
+          tags={['Angular', 'Firebase', 'Tailwind', 'CRUD', 'Authentication']}
+        />
+      </Projects>
+    </Section>
+	</main>
+  <Footer />
+</Layout>
+
+<style>
+	:root {
+		/* --astro-gradient: linear-gradient(0deg,#4F39FA, #DA62C4); */
+		--astro-gradient: linear-gradient(0deg,#DF473A, #fcbf19e7);
+	}
+
+	h1 {
+		margin: 2rem 0;
+    font-family: 'Serat';
+    /* font-size: 3.5rem; */
+	}
+
+	main {
+    margin-top: 7rem;
+    margin-inline: auto;
+    padding: 1em;
+		max-width: 80ch;
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--astro-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 4s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%, 100% { background-position-y: 0%; }
+		50% { background-position-y: 80%; }
+	}
+
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+    margin-top: 1.25rem;
+	}
+</style>
