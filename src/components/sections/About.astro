@@ -1,16 +1,73 @@
 ---
-
+import colors from '../Vars.mjs';
+const { clrHighlight } = colors
 ---
 
-<div class="about" id="about">
+<div class="about flex flex-reverse" >
+  <div class="about-text">
+    <h3 id="hero--text__title" class="mb-4">Industrial Designer turned Front-End Developer</h3>
+    
+    <p class="mb-3">I have always been fascinated by design and the effect that it has. That led me to studying and graduating a Degree in <span class="f-bold">Engineering in Industrial Design</span> and ultimately finding a passion in Web Development.
+    </p>
+
+    <p class="">The main technologies that I like to work with are <span class="f-bold text-highlight">React</span> for the frontend development, <span class="text-highlight f-bold">Express</span> for building backend API’s , <span class="text-highlight f-bold">Figma</span> for designing and <span class="text-highlight f-bold">Vercel</span> for deploying.</p>
+  </div>
+  <figure class="about--image">
+    <img src="/assets/Pics/FotoCV.png" alt="Main Picture" />
+  </figure>
 </div>
 
-<style>
+<style define:vars={{ clrHighlight }}>
+
+  p {
+    font-weight: 400;
+  }
   .about {
-    background-color: aqua;
+    /* background-color: aqua; */
     height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .flex {
+    display: flex;
+    gap: 3em
+  }
+
+  .flex-reverse {
+    flex-direction: row-reverse;
+  }
+  .about--image div {
+  width: 300px;
+  aspect-ratio: 0.845;
+  z-index: 0;
+  }
+
+  .mb-4 {
+    margin-bottom: 1.5rem;
+  }
+  .mb-3 {
+    margin-bottom: 1rem;
+  }
+
+  .f-bold {
+    font-weight: 800;
+  }
+
+  .text-highlight {
+    position: relative;
+    z-index: 99;
+  }
+
+  .text-highlight::after {
+    position: absolute;
+    content: '';
+    height: 9px;
+    width: calc(100% + 2px);
+    background-color: var(--clrHighlight);
+    left: -1px;
+    bottom: 0;
+    z-index: -1;
   }
 </style>

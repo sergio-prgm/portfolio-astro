@@ -41,7 +41,7 @@ import Navbar from '../components/Navbar.astro';
 <style>
 	:root {
 		/* --astro-gradient: linear-gradient(0deg,#4F39FA, #DA62C4); */
-		--astro-gradient: linear-gradient(0deg,#DF473A, #fcbf19e7);
+		--astro-gradient: linear-gradient(0deg,#b82e45, #fc9037e7);
 	}
 
 	h1 {
@@ -49,6 +49,19 @@ import Navbar from '../components/Navbar.astro';
     font-family: 'Serat';
     /* font-size: 3.5rem; */
 	}
+
+:global(h3) {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 1.2;
+}
+
+:global(p) {
+  font-family: var(--font-principal);
+  font-size: 18px;
+  line-height: 1.6;
+}
 
 	main {
     margin-top: 7rem;
