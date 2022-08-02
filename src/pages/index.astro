@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Section from '../layouts/Section.astro';
 
 import Projects from '../components/sections/Projects.astro';
 import Hero from '../components/sections/Hero.astro';
@@ -8,28 +7,43 @@ import About from '../components/sections/About.astro'
 import ProjectCard from '../components/ProjectCard.astro';
 import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
+import Section from '../layouts/Section.astro';
+
+// TODO Add all the projectCards descriptions
 ---
 <Layout title="Welcome to Astro.">
   <Navbar />
 	<main>
 		<h1><span class="text-gradient">Sergio Esteve Jordá</span></h1>
-    <Section title="Hero">
-      <Hero />
-    </Section>
+    <Hero />
     <Section title="About">
       <About />
     </Section>
     <Section title="Projects">
       <Projects >
+        <ProjectCard description="Sudoku solving app with over 5k handmade puzzles built using React, Express, and MongoDB."
+          title="SudokuApp"
+          href='https://sudokuapp.xyz'
+          github="https://github.com/sergio-prgm/sudoku-app"
+          tags={['React', 'Express', 'Vanilla CSS', 'Authentication', 'MongoDB', 'Docker']}
+        />
         <ProjectCard description="Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
           title="Gym logger"
           href='https://mdn.dev'
+          github="https://github.com/sergio-prgm/gym-tracker"
           tags={['Angular', 'Firebase', 'Tailwind', 'CRUD', 'Authentication']}
         />
-        <ProjectCard description="This is a test to seee how it behaves with different sizes of text. Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
-          title="Gym logger"
+        <ProjectCard description="SPA built with Angular that uses the Google Books API to search and display collections of books."
+          title="Book-hub"
           href='https://mdn.dev'
-          tags={['Angular', 'Firebase', 'Tailwind', 'CRUD', 'Authentication']}
+          github="https://github.com/sergio-prgm/bookdepo"
+          tags={['Angular', 'Vanila CSS', 'External API', 'Angular Universal', 'RxJS']}
+        />
+        <ProjectCard description="CRUD app using the Giphy API to show a collection of gifs and save them to a database. Followed the React course by Midudev."
+          title="Giffy"
+          href='https://giffy-two-dusky.vercel.app'
+          github="https://github.com/sergio-prgm/giffy"
+          tags={['CRUD', 'Express', 'Authentication', 'React', 'Vanilla CSS', 'MongoDB', 'Docker']}
         />
       </Projects>
     </Section>
@@ -50,17 +64,27 @@ import Navbar from '../components/Navbar.astro';
     /* font-size: 3.5rem; */
 	}
 
-:global(h3) {
-  font-size: 2rem;
-  font-weight: 800;
-  letter-spacing: -1px;
-  line-height: 1.2;
-}
+  :global(h3) {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
+  }
 
-:global(p) {
-  font-family: var(--font-principal);
-  font-size: 18px;
-  line-height: 1.6;
+  :global(p) {
+    font-family: var(--font-principal);
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  :global(section) {
+    top: 7rem;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+  }
+:global(section:nth-of-type(n + 2)) {
+  padding-top: 10rem;
 }
 
 	main {

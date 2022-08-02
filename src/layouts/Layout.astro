@@ -17,13 +17,16 @@ const { title } = Astro.props as Props;
 
 <style>
   :root {
-    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+    /* --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
 		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem); 
-    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem); */
 
     --clr-primary: hsl(0, 0%, 10%);
     --clr-accent: #df473a;
     --clr-highlight: #df473ab0;
+
+    --gradient-l: #b82e45;
+    --gradient-r: #fc9037e7;
 
     --font-principal: 'Aktiv Grotesk';
     --font-title: 'Serat';
@@ -36,11 +39,11 @@ const { title } = Astro.props as Props;
   }
 
   :global(h1) {
-    font-size: var(--font-size-xl);
+    font-size: 3rem;
   }
 
   :global(h3) {
-    font-size: var(--font-size-lg);
+    font-size: 1.5rem;
   }
   :global(.button--primary) {
     display: block;

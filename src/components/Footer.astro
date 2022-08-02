@@ -1,10 +1,101 @@
 ---
-
+import colors from "./Vars.mjs";
+const {clrPrimary} = colors
+// TODO Add notification tooltip to copy Email
 ---
 <footer>
-  <strong>Sergio Esteve Jordá</strong>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="assets/Logo/LogoRecurso 1.svg" width="60" height="60" alt="footer-logo">
+      <div>Sergio Esteve Jordá</div>
+    </div>
+    <div class="footer-contact">
+      <span>Contact</span>
+      <div class="footer-icons">
+
+        <a target="_blank" href="https://www.linkedin.com/in/sergio-esteve-742b7618a/">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 3.5475C1.25 2.93817 1.49206 2.35379 1.92292 1.92293C2.35379 1.49206 2.93817 1.25 3.5475 1.25H26.45C26.752 1.24951 27.0511 1.30858 27.3302 1.42384C27.6093 1.53909 27.8629 1.70827 28.0766 1.92167C28.2902 2.13508 28.4597 2.38853 28.5752 2.66752C28.6908 2.9465 28.7502 3.24553 28.75 3.5475V26.45C28.7503 26.752 28.6911 27.0512 28.5757 27.3303C28.4603 27.6094 28.291 27.863 28.0775 28.0766C27.864 28.2903 27.6105 28.4597 27.3314 28.5752C27.0524 28.6908 26.7533 28.7502 26.4513 28.75H3.5475C3.24568 28.75 2.94682 28.6905 2.668 28.575C2.38917 28.4595 2.13584 28.2901 1.92248 28.0766C1.70912 27.8632 1.53991 27.6097 1.42453 27.3309C1.30914 27.052 1.24984 26.7531 1.25 26.4513V3.5475ZM12.135 11.735H15.8588V13.605C16.3963 12.53 17.7713 11.5625 19.8375 11.5625C23.7988 11.5625 24.7375 13.7038 24.7375 17.6325V24.91H20.7288V18.5275C20.7288 16.29 20.1913 15.0275 18.8263 15.0275C16.9325 15.0275 16.145 16.3888 16.145 18.5275V24.91H12.135V11.735ZM5.26 24.7388H9.27V11.5625H5.26V24.7375V24.7388ZM9.84375 7.265C9.85131 7.60834 9.79022 7.94974 9.66405 8.26915C9.53788 8.58856 9.34919 8.87955 9.10904 9.12504C8.86889 9.37054 8.58212 9.56559 8.26557 9.69876C7.94902 9.83193 7.60905 9.90053 7.26563 9.90053C6.9222 9.90053 6.58224 9.83193 6.26568 9.69876C5.94913 9.56559 5.66236 9.37054 5.42221 9.12504C5.18206 8.87955 4.99337 8.58856 4.8672 8.26915C4.74104 7.94974 4.67994 7.60834 4.6875 7.265C4.70234 6.59107 4.98048 5.94974 5.46236 5.47836C5.94423 5.00698 6.59153 4.74303 7.26563 4.74303C7.93972 4.74303 8.58702 5.00698 9.06889 5.47836C9.55077 5.94974 9.82891 6.59107 9.84375 7.265Z" fill="#1A1A1A"/>
+          </svg>
+        </a>
+
+        <a target="_blank" href="https://github.com/sergio-prgm">
+          <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 0C6.7125 0 0 6.7125 0 15C0 21.6375 4.29375 27.2437 10.2563 29.2313C11.0063 29.3625 11.2875 28.9125 11.2875 28.5188C11.2875 28.1625 11.2688 26.9813 11.2688 25.725C7.5 26.4188 6.525 24.8062 6.225 23.9625C6.05625 23.5312 5.325 22.2 4.6875 21.8438C4.1625 21.5625 3.4125 20.8687 4.66875 20.85C5.85 20.8313 6.69375 21.9375 6.975 22.3875C8.325 24.6562 10.4812 24.0187 11.3438 23.625C11.475 22.65 11.8688 21.9937 12.3 21.6187C8.9625 21.2437 5.475 19.95 5.475 14.2125C5.475 12.5813 6.05625 11.2313 7.0125 10.1813C6.8625 9.80625 6.3375 8.26875 7.1625 6.20625C7.1625 6.20625 8.41875 5.8125 11.2875 7.74375C12.4875 7.40625 13.7625 7.2375 15.0375 7.2375C16.3125 7.2375 17.5875 7.40625 18.7875 7.74375C21.6562 5.79375 22.9125 6.20625 22.9125 6.20625C23.7375 8.26875 23.2125 9.80625 23.0625 10.1813C24.0188 11.2313 24.6 12.5625 24.6 14.2125C24.6 19.9688 21.0938 21.2437 17.7563 21.6187C18.3 22.0875 18.7688 22.9875 18.7688 24.3937C18.7688 26.4 18.75 28.0125 18.75 28.5188C18.75 28.9125 19.0312 29.3813 19.7812 29.2313C22.759 28.2259 25.3465 26.3121 27.1796 23.7592C29.0127 21.2063 29.9991 18.1429 30 15C30 6.7125 23.2875 0 15 0Z" fill="#1A1A1A"/>
+          </svg>
+        </a>
+        
+        <button class="button">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.25 6.75L18 18L33.75 6.75M2.25 29.25H33.75V6.75H2.25V29.25Z" stroke="#1A1A1A" stroke-width="2" fill="transparent" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script>
+  function copy() {
+    const copyText = 'sergio3597@gmail.com' 
+
+    navigator.clipboard.writeText(copyText);
+    alert('Copied email!!')
+  }
+
+  document.querySelector('.button').addEventListener('click', (e) => {
+    copy()
+  })
+  </script>
 </footer>
 
-<style>
+<style define:vars={{ clrPrimary }}>
+  footer {
+    border-top: 2px solid var(--clrPrimary);
+    padding-block: 1.5rem;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 45ch;
+    margin-inline: auto;
+  }
+
+  .footer-logo {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .footer-logo > div {
+    max-width: 7ch;
+    line-height: 1;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -.5px;
+  }
+
+  footer span {
+    margin-inline: auto;
+    font-size: 24px;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-weight: 600;
+  }
+
+  .footer-icons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer-icons > a,
+  .footer-icons > button {
+    width: 100%
+  }
 
 </style>

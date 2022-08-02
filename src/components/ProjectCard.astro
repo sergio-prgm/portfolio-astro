@@ -1,14 +1,19 @@
 ---
+import colors from "./Vars.mjs";
 export interface Props {
     title: string,
     description: string,
     href: string,
+    github: string,
     tags: string[]
 }
-const {href, title, description, tags} = Astro.props;
+const {href, title, description, tags, github} = Astro.props;
+
+const { clrPrimary } = colors
+// 
 ---
 <li class="project-card">
-  <div href={href} target="_blank" class="main-link">
+  <div class="main-link">
     <h3>
         {title}
         <span>&rarr;</span>
@@ -18,22 +23,21 @@ const {href, title, description, tags} = Astro.props;
     </ul>
 
     <ul class="project--links">
-      <li class="button--primary"><a href="#">Check it out</a></li>
-      <li class="button--secondary"><a href="#">Github repo</a></li>
+      <li class="secondary-link"><a href={href} target="_blank">Visit</a></li>
+      <li class="primary-link"><a href={github} target="_blank">
+        <img width="26" height="26" src="assets/Icon/github-fill.svg" alt="github icon">
+        Code 
+      </a></li>
     </ul>
-    <!-- <div class="projects-links flex mb-3">
-      <a href="#" class="button--primary">Check it out</a>
-      <a href="#" class="button--secondary">Github repo</a>
-    </div> -->
     <p>
         {description}
     </p>
   </div>
 </li>
 
-<style>
+<style define:vars={{ clrPrimary }}>
 	:root {
-		--link-gradient: linear-gradient(45deg, #4F39FA, #DA62C4 30%, var(--clr-secondary) 60%);
+		--link-gradient: linear-gradient(45deg, var(--gradient-l), var(--gradient-r) 30%, var(--clr-primary) 60%);
 	}
   ul {
     margin: 0;
@@ -47,10 +51,9 @@ const {href, title, description, tags} = Astro.props;
   a {
     text-decoration: none;
   }
-
-  .project-card {
+  /* .project-card {
     display: flex;
-    /* padding: 0.15rem; */
+    padding: 0.15rem;
     background-image: var(--link-gradient);
     background-size: 400%;
     border-radius: 0.5rem;
@@ -58,7 +61,7 @@ const {href, title, description, tags} = Astro.props;
     transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .project-card > div.main-link {
+  .project-card > div {
     width: 100%;
     text-decoration: none;
     line-height: 1.4;
@@ -67,6 +70,53 @@ const {href, title, description, tags} = Astro.props;
     color: var(--text-color);
     background-color: white;
     opacity: 0.8;
+  } */
+
+  .secondary-link {
+    display: flex;
+    padding: 0.15rem;
+    background-image: var(--link-gradient);
+    background-size: 400%;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .secondary-link > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: .35rem 1rem;
+    color: var(--text-color);
+    background-color: white;
+    opacity: 0.9;
+    font-size: 1.25rem;
+  }
+
+  .primary-link {
+    display: flex;
+    padding: 0.15rem;
+    background-image: var(--link-gradient);
+    background-size: 400%;
+    background-position: 100%;
+    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .primary-link > a {
+    width: 100%;
+    text-decoration: none;
+    line-height: 1.4;
+    padding: .35rem 1rem;
+    color: var(--text-color);
+    background-color: white;
+    opacity: 0.9;
+    font-size: 1.25rem;
+  }
+
+  .primary-link > a > img {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin-right: .5rem;
   }
   
   .project--tags {
@@ -82,6 +132,7 @@ const {href, title, description, tags} = Astro.props;
     background-color: var(--clr-primary);
     color: var(--clr-secondary);
     padding: 0.5em 1em;
+    font-size: 1rem;
     display: inline-block;
   }
 
@@ -93,10 +144,10 @@ const {href, title, description, tags} = Astro.props;
     flex-wrap: wrap;
   }
 
-  .project--links > li {
+  /* .project--links a {
     font-size: 1.15rem;
     padding: .35rem 0.75rem;
-  }
+  } */
 
 	h3 {
 		margin: 0;
@@ -115,15 +166,18 @@ const {href, title, description, tags} = Astro.props;
 		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 	}
 
-	.project-card:is(:hover, :focus-within) {
+	.primary-link:is(:hover, :focus-within) {
+		background-position: 0;
+	}
+	.secondary-link:is(:hover, :focus-within) {
 		background-position: 0;
 	}
 
-	.project-card:is(:hover, :focus-within) h2 {
+	/* .project-card:is(:hover, :focus-within) h2 {
 		color: #4F39FA;
-	}
+	} */
 
-	.project-card:is(:hover, :focus-within) h2 span {
+	/* .project-card:is(:hover, :focus-within) h2 span {
 		transform: translateX(2px);
-	}
+	} */
 </style>

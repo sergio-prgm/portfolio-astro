@@ -1,9 +1,21 @@
 ---
 
+// TODO Hero Section (without Pic for now)
 ---
 
-<div class="hero">
-</div>
+<section>
+  <div>
+    <h3>Frontend Developer</h3>
+    <p>I love learning new technologies and building user oriented products.</p>
+    <div class="hero--links">
+      <a href='#' class="button--primary" target='_blank'>CV</a>
+      <a href="https://github.com/sergio-prgm" class="button--secondary" target="_blank">Github</a>
+    </div>
+  </div>
+  <figure class="hero--image">
+    <div></div>
+  </figure>
+</section>
 
 <style>
   .hero {
@@ -12,5 +24,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .hero--links {
+    justify-content: space-between;
+    display: flex;
+    gap: 3rem;
   }
 </style>
