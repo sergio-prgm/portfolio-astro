@@ -9,7 +9,6 @@ import Footer from '../components/Footer.astro';
 import Navbar from '../components/Navbar.astro';
 import Section from '../layouts/Section.astro';
 
-// TODO Add all the projectCards descriptions
 ---
 <Layout title="Welcome to Astro.">
   <Navbar />
@@ -61,6 +60,7 @@ import Section from '../layouts/Section.astro';
 	h1 {
 		margin: 2rem 0;
     font-family: 'Serat';
+    line-height: 1.4;
     /* font-size: 3.5rem; */
 	}
 
@@ -83,15 +83,15 @@ import Section from '../layouts/Section.astro';
     justify-content: space-around;
     position: relative;
   }
-:global(section:nth-of-type(n + 2)) {
-  padding-top: 10rem;
-}
+  :global(section:nth-of-type(n + 2)) {
+    padding-top: 10rem;
+  }
 
 	main {
     margin-top: 7rem;
     margin-inline: auto;
     padding: 1em;
-		max-width: 80ch;
+    width: min(80ch, 90vw);
 	}
 
   :global(.observer) {

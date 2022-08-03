@@ -38,6 +38,10 @@ const { title } = Astro.props as Props;
     color: var(--clr-primary);
   }
 
+  .disable-scroll {
+    overflow-y:hidden;
+  }
+
   :global(h1) {
     font-size: 3rem;
   }
@@ -49,13 +53,13 @@ const { title } = Astro.props as Props;
     display: block;
     background-color: var(--clr-accent);
     padding: 0.5em 1em;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600; 
   }
   :global(.button--secondary) {
     display: block;
-    padding: 0.5em 1em;
-    font-size: 1.5rem;
+    padding: calc(0.5em - 2px) calc(1em - 2px);
+    font-size: 1.25rem;
     font-weight: 600; 
     border: 2px solid;
   }

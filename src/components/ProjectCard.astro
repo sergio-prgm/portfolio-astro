@@ -23,7 +23,7 @@ const { clrPrimary } = colors
     </ul>
 
     <ul class="project--links">
-      <li class="secondary-link"><a href={href} target="_blank">Visit</a></li>
+      <li class=""><a href={href} class="button--primary" target="_blank">Visit</a></li>
       <li class="primary-link"><a href={github} target="_blank">
         <img width="26" height="26" src="assets/Icon/github-fill.svg" alt="github icon">
         Code 
@@ -72,29 +72,9 @@ const { clrPrimary } = colors
     opacity: 0.8;
   } */
 
-  .secondary-link {
-    display: flex;
-    padding: 0.15rem;
-    background-image: var(--link-gradient);
-    background-size: 400%;
-    background-position: 100%;
-    transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-  }
-
-  .secondary-link > a {
-    width: 100%;
-    text-decoration: none;
-    line-height: 1.4;
-    padding: .35rem 1rem;
-    color: var(--text-color);
-    background-color: white;
-    opacity: 0.9;
-    font-size: 1.25rem;
-  }
-
   .primary-link {
     display: flex;
-    padding: 0.15rem;
+    padding: 3px;
     background-image: var(--link-gradient);
     background-size: 400%;
     background-position: 100%;
@@ -104,18 +84,19 @@ const { clrPrimary } = colors
   .primary-link > a {
     width: 100%;
     text-decoration: none;
-    line-height: 1.4;
-    padding: .35rem 1rem;
+    line-height: 1.9;
+    padding: .1rem .7rem;
     color: var(--text-color);
     background-color: white;
     opacity: 0.9;
     font-size: 1.25rem;
+    font-weight: 600;
   }
 
   .primary-link > a > img {
     display: inline-block;
     position: relative;
-    top: 5px;
+    top: 6px;
     margin-right: .5rem;
   }
   

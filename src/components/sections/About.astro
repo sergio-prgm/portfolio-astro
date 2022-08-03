@@ -7,18 +7,18 @@ const { clrHighlight } = colors
   <!-- <header>
     <h2>About</h2>
   </header> -->
-  <div class="about flex flex-reverse" >
-    <div class="about-text">
-      <h3 id="hero--text__title" class="mb-4">Industrial Designer turned Front-End Developer</h3>
-      
-      <p class="mb-3">I have always been fascinated by design and the effect that it has. That led me to studying and graduating a Degree in <span class="f-bold">Engineering in Industrial Design</span> and ultimately finding a passion in Web Development.
-      </p>
-
-      <p class="">The main technologies that I like to work with are <span class="f-bold text-highlight">React</span> for the frontend development, <span class="text-highlight f-bold">Express</span> for building backend API’s , <span class="text-highlight f-bold">Figma</span> for designing and <span class="text-highlight f-bold">Vercel</span> for deploying.</p>
-    </div>
+  <div class="about" >
     <figure class="about--image">
       <img src="/assets/Pics/FotoCV.png" alt="Main Picture" />
     </figure>
+    <div class="about-text">
+      <h3 id="hero--text__title" class="mb-4">Industrial Designer turned Front-End Developer</h3>
+      
+      <p class="mb-3">I have always been fascinated by design and the effect that it has. That led me to studying and graduating a Degree in <span class="">Engineering in Industrial Design</span> and ultimately finding a passion in Web Development.
+      </p>
+
+      <p class="">The main technologies that I like to work with are <span class=" text-highlight">React</span> for the frontend development, <span class="text-highlight f-bold">Express</span> for building backend API’s , <span class="text-highlight f-bold">Figma</span> for designing and <span class="text-highlight f-bold">Vercel</span> for deploying.</p>
+    </div>
   </div>
 <!-- </section> -->
 
@@ -31,20 +31,16 @@ const { clrHighlight } = colors
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3em;
+    flex-wrap: wrap;
   }
 
-  .flex {
-    display: flex;
-    gap: 3em
+  .about-text {
+    width: min(52ch, 100%);
   }
 
-  .flex-reverse {
-    flex-direction: row-reverse;
-  }
-  .about--image div {
-  width: 300px;
-  aspect-ratio: 0.845;
-  z-index: 0;
+  figure {
+    max-width: 18ch;
   }
 
   .mb-4 {
@@ -54,13 +50,10 @@ const { clrHighlight } = colors
     margin-bottom: 1rem;
   }
 
-  .f-bold {
-    font-weight: 800;
-  }
-
   .text-highlight {
     position: relative;
     z-index: 99;
+    font-weight: 800;
   }
 
   .text-highlight::after {
