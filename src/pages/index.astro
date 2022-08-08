@@ -20,25 +20,31 @@ import Section from '../layouts/Section.astro';
     </Section>
     <Section title="Projects">
       <Projects >
-        <ProjectCard description="Sudoku solving app with over 5k handmade puzzles built using React, Express, and MongoDB."
+        <ProjectCard 
+          description="Sudoku solving app with over 5k handmade puzzles built using React, Express, and MongoDB."
+          description="This project was built using React (context, custom hooks, etc.) for the UI development and a simple backend API using Express on top of NodeJS and MongoDB for the NoSQL database. The backend was deployed using Docker."
           title="SudokuApp"
           href='https://sudokuapp.xyz'
           github="https://github.com/sergio-prgm/sudoku-app"
           tags={['React', 'Express', 'Vanilla CSS', 'Authentication', 'MongoDB', 'Docker']}
         />
-        <ProjectCard description="Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
+        <ProjectCard 
+          description="Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
+          description="This is a CRUD application using Angular alongside TailwindCSS for the Frontend/UI development and Firebase (authentication, Firestore) for handling the backend responsibilities and deployment/hosting."
           title="Gym logger"
           href='https://mdn.dev'
           github="https://github.com/sergio-prgm/gym-tracker"
           tags={['Angular', 'Firebase', 'Tailwind', 'CRUD', 'Authentication']}
         />
-        <ProjectCard description="SPA built with Angular that uses the Google Books API to search and display collections of books."
+        <ProjectCard 
+          description="SPA built with Angular and RxJS that uses the Google Books API to search and display collections of books."
           title="Book-hub"
           href='https://mdn.dev'
           github="https://github.com/sergio-prgm/bookdepo"
-          tags={['Angular', 'Vanila CSS', 'External API', 'Angular Universal', 'RxJS']}
+          tags={['Angular', 'Vanilla CSS', 'External API', 'Angular Universal', 'RxJS']}
         />
-        <ProjectCard description="CRUD app using the Giphy API to show a collection of gifs and save them to a database. Followed the React course by Midudev."
+        <ProjectCard 
+          description="CRUD app built on React using the Giphy API to show a collection of gifs and save them to a database through a backend built on Express and MongoDb. Followed the React course by Midudev."
           title="Giffy"
           href='https://giffy-two-dusky.vercel.app'
           github="https://github.com/sergio-prgm/giffy"
