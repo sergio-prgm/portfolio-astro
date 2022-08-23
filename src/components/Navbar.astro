@@ -72,6 +72,13 @@
     }
   }
 
+  @supports (-webkit-backdrop-filter: blur(1rem)) {
+    .primary-navigation {
+      background: hsla(0, 0%, 10%, 0.7);
+      -webkit-backdrop-filter: blur(6px);
+    }
+  }
+
   @media (max-width: 35em) {
     .primary-navigation {
       margin: 0;
@@ -99,7 +106,7 @@
     .mobile-nav-toggle {
       display: block;
       position: absolute;
-      background: #0a0a0a;
+      background: #0a0a44;
       color: #fafafa;
       width: 2rem;
       font-size: 2rem;
