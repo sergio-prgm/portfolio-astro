@@ -21,20 +21,25 @@ import Section from '../layouts/Section.astro';
     <Section title="Projects">
       <Projects >
         <ProjectCard 
-          description="Sudoku solving app with over 5k handmade puzzles built using React, Express, and MongoDB."
-          description="This project was built using React (context, custom hooks, etc.) for the UI development and a simple backend API using Express on top of NodeJS and MongoDB for the NoSQL database. The backend was deployed using Docker."
-          title="SudokuApp"
-          href='https://sudokuapp.xyz'
-          github="https://github.com/sergio-prgm/sudoku-app"
-          tags={['React', 'Express', 'Vanilla CSS', 'Authentication', 'MongoDB', 'Docker']}
+        description="This project was built using React (context, custom hooks, etc.) for the UI development and a simple backend API using Express on top of NodeJS and MongoDB for the NoSQL database. The backend was deployed using Docker."
+        title="SudokuApp"
+        href='https://sudokuapp.xyz'
+        github="https://github.com/sergio-prgm/sudoku-app"
+        tags={['React', 'Express', 'Vanilla CSS', 'Authentication', 'MongoDB', 'Docker']}
         />
         <ProjectCard 
-          description="Exercise tracking app with authentication and data persistency using Firebase, Angular & Tailwind CSS."
-          description="This is a CRUD application using Angular alongside TailwindCSS for the Frontend/UI development and Firebase (authentication, Firestore) for handling the backend responsibilities and deployment/hosting."
+          description="E-commerce built with Vue 3 and Nuxt 3 for both backend and frontend, using the latest features of both tools (composition API and composables, typesafe data fetching, etc.) with Typescript and tailwindcss for faster styling."
+          title="Stash (Stationery Store)"
+          href='https://stashnery.vercel.app'
+          github="https://github.com/sergio-prgm/stashnery"
+          tags={['Vue', 'Nuxt', 'tailwindcss', 'e-commerce']}
+        />
+        <ProjectCard 
+          description="This is a CRUD application using Angular alongside tailwindcssCSS for the Frontend/UI development and Firebase (authentication, Firestore) for handling the backend responsibilities and deployment/hosting."
           title="Gym logger"
           href='https://mdn.dev'
           github="https://github.com/sergio-prgm/gym-tracker"
-          tags={['Angular', 'Firebase', 'Tailwind', 'CRUD', 'Authentication']}
+          tags={['Angular', 'Firebase', 'tailwindcss', 'CRUD', 'Authentication']}
         />
         <ProjectCard 
           description="SPA built with Angular and RxJS that uses the Google Books API to search and display collections of books."
